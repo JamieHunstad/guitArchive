@@ -13,6 +13,11 @@ target/
 .springBeans
 .sts4-cache
 
+# IDE-Specific Files and Directories
+.idea/
+.vscode/
+.settings/
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -29,5 +34,18 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# Miscellaneous
+.DS_Store
+.mvn/
+
+# Dependency Management Files
+pom.xml
+build.gradle
+settings.gradle
+
+# Environment and IDE Configuration Files
+.env
+.gitignore
+
+
+
