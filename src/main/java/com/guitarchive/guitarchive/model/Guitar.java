@@ -10,13 +10,13 @@ public class Guitar implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     private long id;
+    private String nickname;
     private String make;
     private String model;
     private String year;
-    private String imageURL;
-    private String purchaseDate;
-    private String purchaseLocation;
+    private String color;
     private String description;
+    private String imageURL;
 
 
     public long getId() {
@@ -35,16 +35,15 @@ public class Guitar implements Serializable {
         return year;
     }
 
+    public String getColor() {
+        return color;
+    }
+    public String getNickname() {
+        return nickname;
+    }
+
     public String getImageURL() {
         return imageURL;
-    }
-
-    public String getPurchaseDate() {
-        return purchaseDate;
-    }
-
-    public String getPurchaseLocation() {
-        return purchaseLocation;
     }
 
     public String getDescription() {
@@ -67,16 +66,16 @@ public class Guitar implements Serializable {
         this.year = year;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
-    }
-
-    public void setPurchaseDate(String purchaseDate) {
-        this.purchaseDate = purchaseDate;
-    }
-
-    public void setPurchaseLocation(String purchaseLocation) {
-        this.purchaseLocation = purchaseLocation;
     }
 
     public void setDescription(String description) {

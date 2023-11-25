@@ -3,7 +3,6 @@ package com.guitarchive.guitarchive;
 import com.guitarchive.guitarchive.model.Guitar;
 import com.guitarchive.guitarchive.service.GuitarService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
