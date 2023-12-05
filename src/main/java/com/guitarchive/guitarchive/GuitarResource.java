@@ -2,6 +2,7 @@ package com.guitarchive.guitarchive;
 
 import com.guitarchive.guitarchive.model.Guitar;
 import com.guitarchive.guitarchive.service.GuitarService;
+import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,9 +41,9 @@ public class GuitarResource {
         Guitar updateGuitar = guitarService.updateGuitar(guitar);
         return new ResponseEntity<>(updateGuitar, HttpStatus.OK);
     }
-
+    @Transactional
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> updateGuitar(@PathVariable("id") Long id){
+    public ResponseEntity<?> deleteGuitar(@PathVariable("id") Long id){
         guitarService.deleteGuitar(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
